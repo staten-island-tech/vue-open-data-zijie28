@@ -1,10 +1,12 @@
 <script setup>
-import { onMounted, ref } from 'vue';
+import { onMounted, onUpdated, ref } from 'vue';
 import BarChart from './components/BarChart.vue'
 import { Bar } from 'vue-chartjs';
 const api = "https://data.cityofnewyork.us/resource/i7jb-7jku.json"
 let labels = ref([]);
 let data = ref([]);
+let nlables = [];
+let ndata = [];
 onMounted(async () => {
   try {
     const response = await fetch(api);
@@ -13,18 +15,16 @@ onMounted(async () => {
     }
     const result = await response.json();
     const count = counter(result);
-    console.log(count)
     count.forEach((value, key) => {
-      console.log(value)
-      console.log(key)
-      labels.value.push(key);
-      data.value.push(value);
+      nlables.push(key);
+      ndata.push(value);
     })
-
+    labels.value = nlables;
+    data.value = ndata;
   } catch (error) {
     console.error(error.message);
   }
-  
+
   
 }
 )
