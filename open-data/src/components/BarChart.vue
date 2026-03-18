@@ -15,7 +15,6 @@ const prop = defineProps({
   })
 
 
-console.log(prop.data.value)
 const data = computed(() => ({
   labels: prop.lables,
   datasets: [
@@ -47,7 +46,7 @@ const data = computed(() => ({
 
 <template>
 <div style="width:50%;">
-<Bar id="chart" :options="options" :data="data"/>
+<Bar id="chart" :data="data"/>
 </div>
 </template>
 
