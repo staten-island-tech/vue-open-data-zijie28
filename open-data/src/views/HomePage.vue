@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted, onUpdated, ref } from 'vue';
-import BarChart from './components/BarChart.vue'
+import BarChart from '../components/BarChart.vue';
 import { Bar } from 'vue-chartjs';
 const api = "https://data.cityofnewyork.us/resource/i7jb-7jku.json"
 let labels = ref([]);

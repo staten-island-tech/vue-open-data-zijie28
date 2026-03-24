@@ -1,11 +1,13 @@
 import { createWebHistory, createRouter } from 'vue-router';
 
 import App from './App.vue';
-import Status from './routes/status.vue';
+import StatusPage from './views/StatusPage.vue';
+import HomePage from './views/HomePage.vue';
 
 const routes = [
-  { path: '/', component: App },
-  { path: '/status', component: Status }
+  { name: "app", path: '/', component: App },
+  { name: "status", path: '/status', component: StatusPage },
+  { name: "main", path: '/main', component: HomePage },
 ];
 
 export const router = createRouter({

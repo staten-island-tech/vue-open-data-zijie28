@@ -17,6 +17,7 @@ onMounted(async () => {
     count.forEach((value, key) => {
       nlables.push(key);
       ndata.push(value);
+      
     })
     labels.value = nlables;
     data.value = ndata;
@@ -39,5 +40,6 @@ function counter(data) {
 </script>
 
 <template>
+
 <BarChart :data="data" :lables="labels"></BarChart>
 </template>
