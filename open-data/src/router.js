@@ -5,7 +5,6 @@ import StatusPage from './views/StatusPage.vue';
 import HomePage from './views/HomePage.vue';
 
 const routes = [
-  { name: "app", path: '/', component: App },
   { name: "status", path: '/status', component: StatusPage },
   { name: "main", path: '/main', component: HomePage },
 ];
